@@ -1,4 +1,5 @@
-.profile-header {
+.profile-header 
+{
    background-color: #e8f0fe;
    border: 2px solid #cccccc;
    border-radius: 10px;
@@ -10,7 +11,8 @@
    align-items: center;
 }
 
-.profile-header img {
+.profile-header img 
+{
    width: 120px;
    height: 120px;
    object-fit: cover;
@@ -19,37 +21,45 @@
    border: 3px solid #888;
 }
 
-.header-text {
+.header-text 
+{
    flex-grow: 1;
 }
 
-h1 {
+h1 
+{
    margin: 0;
    font-size: 28px;
 }
 
-h2 {
+h2 
+{
    margin-top: 10px;
    font-size: 16px;
    color: #555;
 }
 
-#youtube_iframe {
+#youtube_iframe 
+{
    margin: 30px auto;
    width: fit-content;
 }
 
-p {
+p 
+{
    margin: 20px;
    max-width: 800px;
    line-height: 1.6;
 }
 
-ul {
+ul 
+{
    margin: 20px;
 }
 
-hr {
+hr 
+{
    margin: 30px auto;
    width: 90%;
 }
+
