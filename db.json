@@ -6,7 +6,7 @@
       "description": "Juicy beef patty with classic toppings.",
       "steps": [
         {
-          "id": "bun",
+          "id": "Bun",
           "type": "multiple-choice",
           "instruction": "Choose your bun",
           "options": ["Sesame", "Brioche", "Lettuce Wrap"],
@@ -113,3 +113,4 @@
     }
   ]
 }
+
