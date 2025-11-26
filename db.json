@@ -1,0 +1,115 @@
+{
+  "burgers": [
+    {
+      "id": "classic-beef",
+      "title": "Classic Beef Burger",
+      "description": "Juicy beef patty with classic toppings.",
+      "steps": [
+        {
+          "id": "Bun",
+          "type": "multiple-choice",
+          "instruction": "Choose your bun",
+          "options": ["Sesame", "Brioche", "Lettuce Wrap"],
+          "feedback": null
+        },
+        {
+          "id": "Protein",
+          "type": "multiple-choice",
+          "instruction": "Choose your protein",
+          "options": ["Beef", "Chicken", "Plant-based"],
+          "feedback": null
+        },
+        {
+          "id": "Sauces",
+          "type": "multiple-choice",
+          "instruction": "Choose a sauce",
+          "options": ["Ketchup", "Mayo", "Spicy Chipotle", "Honey Mustard"],
+          "feedback": {
+            "condition": "sauce == 'Spicy Chipotle' && bun == 'Ciabatta'",
+            "message": "Spicy chipotle with a sweet ciabatta bun can be a bold combo!"
+          }
+        },
+        {
+          "id": "Presentation",
+          "type": "image-selection",
+          "instruction": "Choose your burger presentation",
+          "imageOptions": [
+            { "id": "p1", "url": "https://raw.githubusercontent.com/HopeBeagle/CUS1172-Profile-Page/refs/heads/main/CUS1172%20Image%20Folder/Gourmet%20Burger.png", "label": "Gourmet", "isCorrect": false },
+            { "id": "p2", "url": "https://raw.githubusercontent.com/HopeBeagle/CUS1172-Profile-Page/refs/heads/main/CUS1172%20Image%20Folder/Classic%20Burger.jpg", "label": "Classic", "isCorrect": true },
+            { "id": "p3", "url": "https://raw.githubusercontent.com/HopeBeagle/CUS1172-Profile-Page/refs/heads/main/CUS1172%20Image%20Folder/Rustic%20Burger.jpg", "label": "Rustic", "isCorrect": false }
+          ],
+          "feedback": null
+        },
+        {
+          "id": "Extras",
+          "type": "multiple-choice",
+          "instruction": "Choose extras (pick one)",
+          "options": ["None", "Cheese", "Bacon", "Double Patty"],
+          "feedback": {
+            "condition": "choice == 'Double Patty' && protein == 'Plant-based'",
+            "message": "Double patty with plant-based may change cooking time — confirm with server?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "grilled-chicken",
+      "title": "Grilled Chicken Burger",
+      "description": "Grilled chicken breast and fresh toppings.",
+      "steps": [
+        {
+          "id": "Bun",
+          "type": "multiple-choice",
+          "instruction": "Choose your bun",
+          "options": ["Sesame", "Ciabatta", "Lettuce Wrap"],
+          "feedback": null
+        },
+        {
+          "id": "Protein",
+          "type": "multiple-choice",
+          "instruction": "Choose your protein",
+          "options": ["Grilled Chicken", "Crispy Chicken", "Plant-based"],
+          "feedback": null
+        },
+        {
+          "id": "Toppings",
+          "type": "multiple-choice",
+          "instruction": "Choose a topping",
+          "options": ["Lettuce", "Tomato", "Pickles", "Onions"],
+          "feedback": null
+        },
+        {
+          "id": "Sauces",
+          "type": "multiple-choice",
+          "instruction": "Choose a sauce",
+          "options": ["Ketchup", "Mayo", "Spicy Chipotle", "Honey Mustard"],
+          "feedback": {
+            "condition": "sauce == 'Spicy Chipotle' && bun == 'Ciabatta'",
+            "message": "Spicy chipotle with a sweet ciabatta bun can be a bold combo!"
+          }
+        },
+        {
+          "id": "Presentation",
+          "type": "image-selection",
+          "instruction": "Choose your presentation",
+          "imageOptions": [
+            { "id": "p1", "url": "https://raw.githubusercontent.com/HopeBeagle/CUS1172-Profile-Page/refs/heads/main/CUS1172%20Image%20Folder/Gourmet%20Grilled-Chicken%20Burger.png", "label": "Gourmet", "isCorrect": true },
+            { "id": "p2", "url": "https://raw.githubusercontent.com/HopeBeagle/CUS1172-Profile-Page/refs/heads/main/CUS1172%20Image%20Folder/Classic%20Grilled-Chicken%20Burger.webp", "label": "Classic", "isCorrect": false },
+            { "id": "p3", "url": "https://raw.githubusercontent.com/HopeBeagle/CUS1172-Profile-Page/refs/heads/main/CUS1172%20Image%20Folder/Rustic%20Grilled-Chicken%20Burger.webp", "label": "Rustic", "isCorrect": false }
+          ],
+          "feedback": null
+        }
+      ]
+    }
+  ],
+  "feedbackMessages": [
+    {
+      "id": "spicy-sweet",
+      "message": "Spicy sauce with a very sweet bun may clash."
+    },
+    {
+      "id": "too-much-sauce",
+      "message": "Too much sauce could make the burger messy."
+    }
+  ]
+}
