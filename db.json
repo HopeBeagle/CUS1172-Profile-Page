@@ -1,0 +1,115 @@
+{
+  "burgers": [
+    {
+      "id": "classic-beef",
+      "title": "Classic Beef Burger",
+      "description": "Juicy beef patty with classic toppings.",
+      "steps": [
+        {
+          "id": "Bun",
+          "type": "multiple-choice",
+          "instruction": "Choose your bun",
+          "options": ["Sesame", "Brioche", "Lettuce Wrap"],
+          "feedback": null
+        },
+        {
+          "id": "Protein",
+          "type": "multiple-choice",
+          "instruction": "Choose your protein",
+          "options": ["Beef", "Chicken", "Plant-based"],
+          "feedback": null
+        },
+        {
+          "id": "Sauces",
+          "type": "multiple-choice",
+          "instruction": "Choose a sauce",
+          "options": ["Ketchup", "Mayo", "Spicy Chipotle", "Honey Mustard"],
+          "feedback": {
+            "condition": "sauce == 'Spicy Chipotle' && bun == 'Ciabatta'",
+            "message": "Spicy chipotle with a sweet ciabatta bun can be a bold combo!"
+          }
+        },
+        {
+          "id": "Presentation",
+          "type": "image-selection",
+          "instruction": "Choose your burger presentation",
+          "imageOptions": [
+            { "id": "p1", "url": "https://via.placeholder.com/120?text=presentation1", "label": "Stacked", "isCorrect": false },
+            { "id": "p2", "url": "https://via.placeholder.com/120?text=presentation2", "label": "Classic", "isCorrect": true },
+            { "id": "p3", "url": "https://via.placeholder.com/120?text=presentation3", "label": "Rustic", "isCorrect": false }
+          ],
+          "feedback": null
+        },
+        {
+          "id": "Extras",
+          "type": "multiple-choice",
+          "instruction": "Choose extras (pick one)",
+          "options": ["None", "Cheese", "Bacon", "Double Patty"],
+          "feedback": {
+            "condition": "choice == 'Double Patty' && protein == 'Plant-based'",
+            "message": "Double patty with plant-based may change cooking time — confirm with server?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "grilled-chicken",
+      "title": "Grilled Chicken Burger",
+      "description": "Grilled chicken breast and fresh toppings.",
+      "steps": [
+        {
+          "id": "Bun",
+          "type": "multiple-choice",
+          "instruction": "Choose your bun",
+          "options": ["Sesame", "Ciabatta", "Lettuce Wrap"],
+          "feedback": null
+        },
+        {
+          "id": "Protein",
+          "type": "multiple-choice",
+          "instruction": "Choose your protein",
+          "options": ["Grilled Chicken", "Crispy Chicken", "Plant-based"],
+          "feedback": null
+        },
+        {
+          "id": "Toppings",
+          "type": "multiple-choice",
+          "instruction": "Choose a topping",
+          "options": ["Lettuce", "Tomato", "Pickles", "Onions"],
+          "feedback": null
+        },
+        {
+          "id": "Sauces",
+          "type": "multiple-choice",
+          "instruction": "Choose a sauce",
+          "options": ["Ketchup", "Mayo", "Spicy Chipotle", "Honey Mustard"],
+          "feedback": {
+            "condition": "sauce == 'Spicy Chipotle' && bun == 'Ciabatta'",
+            "message": "Spicy chipotle with a sweet ciabatta bun can be a bold combo!"
+          }
+        },
+        {
+          "id": "Presentation",
+          "type": "image-selection",
+          "instruction": "Choose your presentation",
+          "imageOptions": [
+            { "id": "p1", "url": "https://via.placeholder.com/120?text=ch1", "label": "Stacked", "isCorrect": true },
+            { "id": "p2", "url": "https://via.placeholder.com/120?text=ch2", "label": "Open-faced", "isCorrect": false },
+            { "id": "p3", "url": "https://via.placeholder.com/120?text=ch3", "label": "Box", "isCorrect": false }
+          ],
+          "feedback": null
+        }
+      ]
+    }
+  ],
+  "feedbackMessages": [
+    {
+      "id": "spicy-sweet",
+      "message": "Spicy sauce with a very sweet bun may clash."
+    },
+    {
+      "id": "too-much-sauce",
+      "message": "Too much sauce could make the burger messy."
+    }
+  ]
+}
